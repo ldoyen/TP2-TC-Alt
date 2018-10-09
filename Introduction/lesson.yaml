@@ -1,0 +1,134 @@
+- Class: meta
+  Course: TP2-TC-CI
+  Lesson: Introduction
+  Author: Laurent Doyen
+  Type: Standard
+  Organization: IUT2 Grenoble - TC
+  Version: 1
+
+- Class: exact_question
+  Output: Entrez votre numéro d'étudiant.
+  CorrectAnswer: NULL
+  AnswerTests: num_etud()
+  Hint: Entrez votre numéro d'étudiant.
+
+- Class: mult_question
+  Output: swirl va maintenant ouvrir une page web dans votre navigateur internet contenant votre sujet de TP2.
+    Attention, si vous interrompez cette leçon en tapant l'instruction bye(), pensez bien à sauvegarder la page web contenant votre sujet de TP dans votre bookmark.
+    En effet, si vous ne le faites pas, vous n'aurez plus accès au sujet de TP à moins de recommencer depuis le début votre leçon swirl.
+    Etes-vous prêt à commencer cette leçon du TP2 ? Les questions suivantes correspondent à la partie intitulée "Introduction".
+  AnswerChoices: Oui;Non
+  CorrectAnswer: NULL
+  AnswerTests: ouvrir_sujet_TP()
+  Hint: Tapez Oui et validez avec la touche Entrée pour commencer votre TP2.
+
+- Class: exact_question
+  Output: Réponse à la question 0a.
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|taille_echantillon()
+  Hint: Réponse à la question 0a.
+
+- Class: exact_question
+  Output: Réponse à la question 0b.
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|taille_echantillon()
+  Hint: Réponse à la question 0b.
+
+- Class: mult_question
+  Output: Réponse à la question 0c.
+  AnswerChoices: L'ensemble des réels;
+    L'ensemble des réels positifs;
+    L'ensemble des réels compris entre 0 et 1 (0 et 1 inclus);
+    L'ensemble des réels compris entre 0 et 1 (0 et 1 exclus);
+    0 ou 1
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|omnitest(correctVal="0 ou 1")
+  Hint: Réponse à la question 0c.
+
+- Class: mult_question
+  Output: Réponse à la question 0d.
+  AnswerChoices: La première personne interrogée dans le futur échantillon est prête à voter pour le candidat;
+    La deuxième personne interrogée dans le futur échantillon est prête à voter pour le candidat;
+    Dans la deuxième réalisation de l'échantillon, l'intention de vote simulée pour le premier individu correspond à voter en faveur du candidat;
+    Dans la première réalisation de l'échantillon, l'intention de vote simulée pour le deuxième individu correspond à voter en faveur du candidat;
+    L'ensemble des personnes interrogées dans le futur échantillon sont prêtes à voter pour le candidat;
+    Dans la deuxième réalisation de l'échantillon, l'ensemble des intentions de vote simulées sont en faveur du candidat
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|valeur_echantillon()
+  Hint: Réponse à la question 0d.
+
+- Class: mult_question
+  Output: Réponse à la question 0e.
+  AnswerChoices: Oui;
+    Non, car elle est aléatoire;
+    Non, car cela reviendrait à interroger un trop grand nombre d'individus, il faut donc considérer un échantillon;
+    Non, car elle est fixée arbitrairement
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|ON_valeur_echantillon()
+  Hint: Réponse à la question 0e.
+
+- Class: exact_question
+  Output: Réponse à la question 0f.
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|taille_p()
+  Hint: Réponse à la question 0f.
+
+- Class: mult_question
+  Output: Réponse à la question 0g.
+  AnswerChoices: L'ensemble des réels;
+    L'ensemble des réels positifs;
+    L'ensemble des réels compris entre 0 et 1 (0 et 1 inclus);
+    L'ensemble des réels compris entre 0 et 1 (0 et 1 exclus);
+    0 ou 1
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|omnitest(correctVal="L'ensemble des réels compris entre 0 et 1 (0 et 1 inclus)")
+  Hint: Réponse à la question 0g.
+
+- Class: mult_question
+  Output: Réponse à la question 0h.
+  AnswerChoices: La première personne interrogée dans le futur échantillon est prête à voter pour le candidat;
+    La deuxième personne interrogée dans le futur échantillon est prête à voter pour le candidat;
+    Dans la deuxième réalisation de l'échantillon, l'intention de vote simulée pour le premier individu correspond à voter en faveur du candidat;
+    Dans la première réalisation de l'échantillon, l'intention de vote simulée pour le deuxième individu correspond à voter en faveur du candidat;
+    L'ensemble des personnes interrogées dans le futur échantillon sont prêtes à voter pour le candidat;
+    Dans la deuxième réalisation de l'échantillon, l'ensemble des intentions de vote simulées sont en faveur du candidat
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|valeur_p()
+  Hint: Réponse à la question 0h.
+
+- Class: mult_question
+  Output: Réponse à la question 0i.
+  AnswerChoices: Oui;
+    Non, car elle est aléatoire;
+    Non, car cela reviendrait à interroger un trop grand nombre d'individus, il faut donc considérer un échantillon;
+    Non, car elle est fixée arbitrairement
+  CorrectAnswer: stop("Vous ne pouvez pas utiliser skip()")
+  AnswerTests: test_passer()|ON_valeur_p()
+  Hint: Réponse à la question 0i.
+
+- Class: exact_question
+  Output: Swirl va recueillir votre identité afin que vous puissiez procéder à la validation de votre TP. Tapez sur la touche Entrée pour continuer.
+  CorrectAnswer: NULL
+  AnswerTests: submit_log_alt()
+  Hint: Tapez sur la touche Entrée pour continuer.
+
+- Class: mult_question
+  Output: Swirl a ouvert une page Google Form dans votre navigateur web. Vous devez valider cette page (sans rien y modifier) en appuyant sur le bouton ENVOYER.
+    Nous vous rappelons que vous ne pouvez valider qu'une seule fois chaque leçon !
+    Avez-vous validé votre Google Form ?
+  AnswerChoices: Oui;Non
+  CorrectAnswer: NULL
+  AnswerTests: googleForm_log()
+  Hint: Vous devez valider le Google Form, sans le modifier. L'avez-vous fait ?
+
+- Class: mult_question
+  Output: Swirl a maintenant créé un email dans votre utilitaire de messagerie. Vous devez envoyer cet email, sans le modifier, pour finir de valider cette leçon du TP.
+    Avez-vous envoyé l'email créé par swirl ?
+  AnswerChoices: Oui;Non
+  CorrectAnswer: NULL
+  AnswerTests: email_log()
+  Hint: Vous devez envoyer l'email créé par swirl dans votre messagerie, sans le modifier. L'avez-vous fait ?
+
+
+- Class: text
+  Output: Maintenant à vous de faire les leçons suivantes de ce TP2.
