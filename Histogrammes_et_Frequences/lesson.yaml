@@ -128,10 +128,10 @@
 
 
 - Class: exact_question
-  Output: Swirl va recueillir votre identité afin que vous puissiez procéder à la validation de votre TP. Tapez sur la touche Entrée pour continuer.
+  Output: Swirl va recueillir votre identité afin que vous puissiez procéder à la validation de votre TP. Tapez 1 puis appuyez sur la touche Entrée pour continuer.
   CorrectAnswer: NULL
   AnswerTests: submit_log_alt()
-  Hint: Tapez sur la touche Entrée pour continuer.
+  Hint: Tapez 1 puis appuyez sur la touche Entrée pour continuer.
 
 - Class: mult_question
   Output: Swirl a ouvert une page Google Form dans votre navigateur web. Vous devez valider cette page (sans rien y modifier) en appuyant sur le bouton ENVOYER.
